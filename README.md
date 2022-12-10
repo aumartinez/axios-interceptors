@@ -26,14 +26,6 @@ import axios from 'axios'
 import Cookies from 'js-cookie'
 import { URL } from '../static/global'
 
-  let resp = await axios
-                  .post(url, data)
-                  .catch(error => {
-                    console.log(error)
-                  })
-  return resp
-}
-
 // Axios CRUD methods
 const api = {
   async get(url:string) {
