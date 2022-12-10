@@ -152,6 +152,6 @@ export const loginStore = defineStore({
 
 Where loginStore.authlogin is expecting to receive an object (data), which is just an JS object, like {'userName': 'yourUser', 'password': 'Pass1234'}, on a success match it should return an active token, but also a renewal token which you should use on the first one expiration.
 
-Then any other API endpoint which is protected should be expecting to receive an authenticate this token, then lets say that every request you should add the correspoing header including the token
+Then any other API endpoint which is protected should be expecting to receive an authenticate this token, then lets say that every request you should add the corresponding header including the token
 
 **TO BE CONTINUED**
