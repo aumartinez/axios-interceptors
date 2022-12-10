@@ -18,7 +18,7 @@ const URL:any = {
 export { URL }
 ```
 
-Then I create an Axios request handler which I call my "api plugin"
+Then I create an Axios request handler which I call my "api plugin", and use a temp cookie to store the JWT
 ./plugin/api.ts
 ```typescript
 import axios from 'axios'
