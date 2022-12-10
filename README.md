@@ -11,8 +11,9 @@ Something like:
 ```typescript
 const URL:any = {
   API: 'YOUR_API_URL',
-  LOGIN: '/user/session',
-  REFRESH_TOKEN: '/user/refreshSession'
+  LOGIN: '/user/login',
+  REFRESH_TOKEN: '/user/refresh,
+  GET_DATA: '/data/'
 }
 
 export { URL }
