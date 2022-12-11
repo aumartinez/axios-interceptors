@@ -12,7 +12,7 @@ Something like:
 const URL:any = {
   API: 'YOUR_API_URL',
   LOGIN: '/user/login',
-  REFRESH_TOKEN: '/user/refresh,
+  REFRESH_TOKEN: '/user/refresh',
   GET_DATA: '/data/'
 }
 
