@@ -176,7 +176,7 @@ getData(data:any) {
 
 Then this is where we meet the question, where do I refresh this token when it expires? We do have the auth token and the refresh token both available in local cookies. Auth token is used to make calls to the API but when it expires, it will throw an error and we need to use the refresh token to create a new auth token. All this without breaking the user flow in the app.
 
-Here is where axios interceptors come, as it says they do "intercept" the request made through axios and you can listen to the endpoint responses on every API call, whenever the interceptor receive an invalid response, then we work on a callback to refresh the auth token.
+Here is where axios interceptors come to help, as it says they do "intercept" the request made through axios and you can listen to the endpoint responses on every API call, whenever the interceptor receive an invalid response, then we work on a callback to refresh the auth token.
 
 Here is an example for the above implementation:
 ./plugins/api.ts
