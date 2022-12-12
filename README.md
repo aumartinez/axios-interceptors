@@ -152,6 +152,7 @@ For example in a different store component, we may have a function/action to cal
 
 ./store/data.ts
 ```typescript
+...
 getData(data:any) {
       try {
         let url = URL.GET_DATA
@@ -172,6 +173,7 @@ getData(data:any) {
         console.log(error)
       }
     }
+...
 ```
 
 Then this is where we meet the question, where do I refresh this token when it expires? We do have the auth token and the refresh token both available in local cookies. Auth token is used to make calls to the API but when it expires, it will throw an error and we need to use the refresh token to create a new auth token. All this without breaking the user flow in the app.
