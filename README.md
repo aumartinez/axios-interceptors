@@ -237,7 +237,7 @@ async function refreshAccessToken () {
 ...
 ```
 
-Adding the code to call to interceptos before the axios CRUD handlers and since we want to the interceptors to handle axios calls, that's why we are creating a new instance of the axios class and need to replace our axios functions and change them for the keyword 'http'
+Adding the code to call to interceptos before the axios CRUD handlers and since we want to the interceptors to handle axios calls, that's why we are creating a new instance of the axios class and need to replace our axios functions and change them for the new axios instance
 
 ```typescript
 // Axios CRUD methods
@@ -247,7 +247,7 @@ const api = {
     return resp
   },
   async getwithHeaders(url:string, options:any) {
-    let resp = await axios
+    let resp = await http
                     .get(url, options)
                     .catch((error:any) => {
                       this.errorHandler(error)                                    
@@ -255,7 +255,7 @@ const api = {
     return resp
   },
   async post(url:string, data:any) {
-    let resp = await axios
+    let resp = await http
               .post(url, data)
               .catch((error:any) => {
                 this.errorHandler(error)
@@ -263,7 +263,7 @@ const api = {
     return resp
   },
   async putwithHeaders (url:string, data:any, options:any) {
-    let resp = await axios
+    let resp = await http
               .put(url, data, options)
               .catch((error:any) => {
                 this.errorHandler(error)
@@ -271,7 +271,7 @@ const api = {
     return resp
   },
   async patchwithHeaders (url:string, data:any, options:any) {
-    let resp = await axios
+    let resp = await http
               .patch(url, data, options)
               .catch((error:any) => {
                 this.errorHandler(error)
@@ -279,7 +279,7 @@ const api = {
     return resp
   },
   async postwithHeaders(url:string, data:any, options:any) {
-    let resp = await axios
+    let resp = await http
               .post(url, data, options)
               .catch((error:any) => {
                 this.errorHandler(error)
@@ -287,7 +287,7 @@ const api = {
     return resp
   },
   async deletewithHeaders(url:string, options:any) {
-    let resp = await axios
+    let resp = await http
                 .delete(url, options)
                 .catch((error:any) => {
                   this.errorHandler(error)
