@@ -151,7 +151,7 @@ Then any other API endpoint which is protected should be expecting to receive an
 For example in a different store component, we may have a function/action to call the data API and get the returned payload, notice the required token:
 
 ./store/data.ts
-```
+```typescript
 getData(data:any) {
       try {
         let url = URL.GET_DATA
