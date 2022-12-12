@@ -30,7 +30,7 @@ import { URL } from '../static/global'
 // Axios CRUD methods
 const api = {
   async get(url:string) {
-    let resp = await http.get(url)
+    let resp = await axios.get(url)
     return resp
   },
   async getwithHeaders(url:string, options:any) {
