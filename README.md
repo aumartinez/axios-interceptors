@@ -239,7 +239,7 @@ async function refreshAccessToken () {
 ...
 ```
 
-Adding the code to call to interceptos before the axios CRUD handlers and since we want to the interceptors to handle axios calls, that's why we are creating a new instance of the axios class and need to replace our axios functions and change them for the new axios instance
+Adding the code to call to interceptors before the axios CRUD handlers and since we want the interceptors to handle axios calls, that's why we are creating a new instance of the axios class and just need to replace our axios functions and change them for the new axios instance.
 
 ```typescript
 // Axios CRUD methods
