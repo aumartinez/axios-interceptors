@@ -247,7 +247,7 @@ const api = {
     return resp
   },
   async getwithHeaders(url:string, options:any) {
-    let resp = await http
+    let resp = await axios
                     .get(url, options)
                     .catch((error:any) => {
                       this.errorHandler(error)                                    
@@ -255,7 +255,7 @@ const api = {
     return resp
   },
   async post(url:string, data:any) {
-    let resp = await http
+    let resp = await axios
               .post(url, data)
               .catch((error:any) => {
                 this.errorHandler(error)
@@ -263,7 +263,7 @@ const api = {
     return resp
   },
   async putwithHeaders (url:string, data:any, options:any) {
-    let resp = await http
+    let resp = await axios
               .put(url, data, options)
               .catch((error:any) => {
                 this.errorHandler(error)
@@ -271,7 +271,7 @@ const api = {
     return resp
   },
   async patchwithHeaders (url:string, data:any, options:any) {
-    let resp = await http
+    let resp = await axios
               .patch(url, data, options)
               .catch((error:any) => {
                 this.errorHandler(error)
@@ -279,7 +279,7 @@ const api = {
     return resp
   },
   async postwithHeaders(url:string, data:any, options:any) {
-    let resp = await http
+    let resp = await axios
               .post(url, data, options)
               .catch((error:any) => {
                 this.errorHandler(error)
@@ -287,7 +287,7 @@ const api = {
     return resp
   },
   async deletewithHeaders(url:string, options:any) {
-    let resp = await http
+    let resp = await axios
                 .delete(url, options)
                 .catch((error:any) => {
                   this.errorHandler(error)
@@ -299,16 +299,7 @@ const api = {
         throw 'Api is offline'
       }
 
-      switch(error.response.data) {
-        case 'EMAIL_ALREADY_EXISTS':
-          throw 'Email is already registered'  
-          
-        case 'USER_REQUIRE_EMAIL_CONFIRMATION':
-          throw 'Email is not confirmed yet'
-
-        default:
-          throw 'Api error'
-      }  
+      throw 'Api error'
     } catch (e) {
       console.log (e)
     }
