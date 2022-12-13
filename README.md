@@ -1,7 +1,7 @@
 # axios-interceptors
 Using axios interceptors to refresh a JWT
 
-I struggle a little trying to find out how to use axios interceptors to refresh an expired JWT token, and I did not want to change my current project structure to match other people's implementation, which are good, but would result in a real hassle to change. Then I came out with the below.
+I struggled a little trying to find out how to use axios interceptors to refresh an expired JWT token, and I did not want to change my current project structure to match other people's implementation, which are good, but would result in a real hassle to change. Then I came out with the below.
 
 I use a global.ts file to store global API URLs, but you can use whatever fits better on your project.
 
