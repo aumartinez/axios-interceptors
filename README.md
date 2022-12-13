@@ -311,3 +311,5 @@ const api = {
 
 export default api
 ```
+
+All this in the same ./plugin/api.ts file without making any additional changes to the project structure.
