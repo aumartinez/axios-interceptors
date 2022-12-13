@@ -181,6 +181,7 @@ Then this is where we meet the question, where do I refresh this token when it e
 Here is where axios interceptors come to help, as it says they do "intercept" the request made through axios and you can listen to the endpoint responses on every API call, whenever the interceptor receive an invalid response, then we work on a callback to refresh the auth token.
 
 Here is an example for the above implementation:
+
 ./plugins/api.ts
 ```typescript
 ...
