@@ -123,7 +123,7 @@ export const loginStore = defineStore({
         .then((res:any) => {
           if (res?.data) {
             const token = res?.data.token
-            const refreshToken = res?.data.refreshToken            
+            const refToken = res?.data.refreshToken            
             this.setAuthCookie(token, refToken)
             this.logged = true
           }          
